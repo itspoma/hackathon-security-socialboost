@@ -10,19 +10,27 @@
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-}
 
-#secure_switch i {
-    width: 10px;
-    height: 10px;
-    display: block;
-    background: white;
-}
+    i {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-color: white;
+        background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-open.png');
+        background-repeat: no-repeat;
+        background-position: center;     
+    }
 
-#secure_switch.on i {
-    background-color: green;
-}
+    &.on {
+        i {
+            background-color: white;
+            background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-close.png');
+        }
+    }
 
-#secure_switch.off i {
-    background-color: red;
+    &.off {
+        i {
+            background-color: white;
+        }
+    }
 }

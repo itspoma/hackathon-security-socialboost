@@ -1,0 +1,23 @@
+#ok-e-m.secured,
+input[uid="uidClickSimpleInput"].secured {
+    background: #C7FFC7;
+}
+
+#secure_switch {
+    display: inline-block;
+    background: #FFF;
+    background-color: #FFF;
+    border: 1px #CDE59F solid;
+    width: 32px;
+    height: 30px;
+    margin-top: 4px;
+
+    &:hover {
+        border-color: #85B429;
+    }
+
+    i {
+        margin-top: 5px;
+        margin-left: 7px;
+    }
+}

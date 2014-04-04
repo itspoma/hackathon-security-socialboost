@@ -104,9 +104,31 @@
             "http://facebook.com/*"
         ],
         "run_at": "document_end"
-    }
-
-    ],
+    }, {
+        "css": [
+            "css/main.css",
+            "css/services/odnoklassniki.css"
+        ],
+        "js": [
+            "js/lib/jquery-2.1.0.min.js",
+            "js/lib/crypto-js/core-3.1.2.min.js",
+            "js/lib/crypto-js/enc-utf16-3.1.2.min.js",
+            "js/lib/crypto-js/enc-base64-3.1.2.min.js",
+            "js/lib/crypto-js/aes-3.1.2.min.js",
+            "js/lib/BigInt.js",
+            "js/diffieHellman.js",
+            "js/utils.js",
+            "js/service.js",
+            "js/services/odnoklassniki.js"
+        ],
+        "matches": [
+            "https://www.odnoklassniki.ru/*",
+            "http://www.odnoklassniki.ru/*",
+            "https://odnoklassniki.ru/*",
+            "http://odnoklassniki.ru/*"
+        ],
+        "run_at": "document_end"
+    } ],
 
     "page_action": {
         "default_icon": {

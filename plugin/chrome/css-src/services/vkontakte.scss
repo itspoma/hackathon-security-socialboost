@@ -13,27 +13,8 @@ button#im_send.faked {
     box-shadow: #FFF 0px 0px 2px 0px;
 
     i {
-        width: 20px;
         height: 25px;
-        display: block;
-        background-color: white;
-        background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-open.png');
-        background-repeat: no-repeat;
-        background-position: center;
         background-position-y: 5px;
         margin-left: 15px;
-    }
-
-    &.on {
-        i {
-            background-color: white;
-            background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-close.png');
-        }
-    }
-
-    &.off {
-        i {
-            background-color: white;
-        }
     }
 }

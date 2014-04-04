@@ -20,9 +20,6 @@ class Vkontakte extends Service
 
         el = @getMessageElement()
 
-        # console.log el
-        # console.log el[0].innerText
-
         rawMessage = el.text()
         encryptedMessage = @encryptMessage(rawMessage)
 

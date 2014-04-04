@@ -7,6 +7,14 @@ textarea[name="message_body"].secured,
     vertical-align: top;
 }
 
+#js_22 ._1rw label.uiButtonConfirm.faked {
+    display: none;
+}
+
+#replay_fake {
+    width: 32px;
+}
+
 #secure_switch {
     display: inline-block;
     width: 33px;
@@ -19,27 +27,7 @@ textarea[name="message_body"].secured,
     }
 
     i {
-        width: 20px;
-        height: 20px;
-        display: block;
-        background-color: white;
-        background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-open.png');
-        background-repeat: no-repeat;
-        background-position: center;
         margin-top: 5px;
         margin-left: 7px;
-    }
-
-    &.on {
-        i {
-            background-color: white;
-            background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-close.png');
-        }
-    }
-
-    &.off {
-        i {
-            background-color: white;
-        }
     }
 }
