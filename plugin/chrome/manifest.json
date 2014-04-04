@@ -70,8 +70,8 @@
             "js/services/vkontakte.js"
         ],
         "matches": [
-        "https://vk.com/*",
-        "http://vk.com/*"
+            "https://vk.com/*",
+            "http://vk.com/*"
         ],
         "run_at": "document_end"
     }, {
@@ -140,7 +140,12 @@
 
     "content_security_policy": "default-src 'self'; connect-src *; script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; style-src * blob: data: filesystem: 'unsafe-inline'; img-src *; frame-src * http://www.facebook.com https://plusone.google.com https://platform.twitter.com blob: data: filesystem:; font-src * blob: data: filesystem:; media-src *;",
 
-    "web_accessible_resources": [ "graph/icon16.png", "graph/icon32.png"]
+    "web_accessible_resources": [
+        "graph/padlock-open.png",
+        "graph/padlock-close.png",
+        "graph/icon16.png",
+        "graph/icon32.png"
+    ]
 
     // "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
     // ,

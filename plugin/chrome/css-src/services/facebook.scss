@@ -3,9 +3,43 @@ textarea[name="message_body"].secured,
     background: #C7FFC7;
 }
 
+#js_22 ._211 form._212 {
+    vertical-align: top;
+}
+
 #secure_switch {
     display: inline-block;
-    width: 30px;
+    width: 33px;
     height: 34px;
-    background: #F00;
+
+    &:hover {
+        &, i {
+            background-color: #F7F7F7 !important;
+        }
+    }
+
+    i {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-color: white;
+        background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-open.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 5px;
+        margin-left: 7px;
+    }
+
+    &.on {
+        i {
+            background-color: white;
+            background-image: url('chrome-extension://__MSG_@@extension_id__/graph/padlock-close.png');
+        }
+    }
+
+    &.off {
+        i {
+            background-color: white;
+        }
+    }
 }

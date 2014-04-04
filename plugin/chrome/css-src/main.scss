@@ -11,3 +11,18 @@
     -o-user-select: none;
     user-select: none;
 }
+
+#secure_switch i {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: white;
+}
+
+#secure_switch.on i {
+    background-color: green;
+}
+
+#secure_switch.off i {
+    background-color: red;
+}

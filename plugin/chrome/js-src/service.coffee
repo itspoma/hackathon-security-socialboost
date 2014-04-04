@@ -3,11 +3,14 @@ class @Service
   addSwitchButtonElement: -> throw new Exception 'abstraction method must be declared'
   getSwitchButtonElement: -> $('#secure_switch')
   
-  init: ->
+  init: =>
     @addSwitchButtonElement()
+    @getSwitchButtonElement().addClass 'off'
     @bindEvents()
 
-  initAfter: (ms) -> setTimeout @init, ms
+  initAfter: (ms) ->
+    console.log 111, this, ms
+    setTimeout @init, ms
 
   bindEvents: ->
     $('#secure_switch').bind 'click', => @toggleSecureElement()
@@ -16,8 +19,16 @@ class @Service
   
   secureElement: ->
     @getMessageElement().addClass 'secured'
-    @getSwitchButtonElement().text 'ON'
+    el = @getSwitchButtonElement()
+    el.removeClass 'on'
+    el.removeClass 'off'
+    el.addClass 'on'
+    el.attr 'title', 'захищено'
   unsecureElement: ->
     @getMessageElement().removeClass 'secured'
-    @getSwitchButtonElement().text 'OFF'
+    el = @getSwitchButtonElement()
+    el.removeClass 'on'
+    el.removeClass 'off'
+    el.addClass 'off'
+    el.attr 'title', 'не захищено'
   toggleSecureElement: -> if not @isSecured() then @secureElement() else @unsecureElement()
