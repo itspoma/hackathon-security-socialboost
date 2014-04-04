@@ -1,59 +1,15 @@
 @AESHumanizer = ->
-  nouns = [
-    "frogs"
-    "dogs"
-    "eggnogs"
-    "fogs"
-    "logs"
-    "cogs"
-    "clogs"
-    "balrogs"
-    "polywogs"
-    "groundhogs"
-    "bogs"
-    "grogs"
-    "smogs"
-    "backlogs"
-    "catalogs"
-    "warthogs"
-  ]
-  verbs = [
-    "enjoy"
-    "detest"
-    "juggle"
-    "unearth"
-    "devour"
-    "fear"
-    "debug"
-    "debilitate"
-    "accost"
-    "toss"
-    "greet"
-    "conceptualize"
-    "squeeze"
-    "decapitate"
-    "construct"
-    "patronize"
-  ]
-  conjunctions = [
-    "and"
-    "when"
-    "whenever"
-    "despite"
-    "although"
-    "but"
-  ]
-  adverbs = [
-    "also"
-    "however"
-    "unfortunately"
-    "alternatively"
-    "logically"
-    "conversely"
-    "sadly"
-    "fortunately"
-  ]
+  nouns = ["frogs", "dogs", "eggnogs", "fogs", "logs", "cogs", "clogs", "balrogs",
+    "polywogs", "groundhogs", "bogs", "grogs", "smogs", "backlogs", "catalogs",
+    "warthogs"]
+  verbs = ["enjoy", "detest", "juggle", "unearth", "devour", "fear", "debug",
+    "debilitate", "accost", "toss", "greet", "conceptualize", "squeeze", "decapitate",
+    "construct", "patronize"]
+  conjunctions = ["and", "when", "whenever", "despite", "although", "but"]
+  adverbs = ["also", "however", "unfortunately", "alternatively", "logically",
+    "conversely", "sadly", "fortunately"]
   englishPhrase = undefined
+
   convertByteToNoun = (bytes) ->
     nouns[bytes]
 
