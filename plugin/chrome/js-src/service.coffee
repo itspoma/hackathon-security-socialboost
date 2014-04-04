@@ -9,7 +9,6 @@ class @Service
     @bindEvents()
 
   initAfter: (ms) ->
-    console.log 111, this, ms
     setTimeout @init, ms
 
   bindEvents: ->
@@ -32,3 +31,9 @@ class @Service
     el.addClass 'off'
     el.attr 'title', 'не захищено'
   toggleSecureElement: -> if not @isSecured() then @secureElement() else @unsecureElement()
+
+  encryptMessage: (message) ->
+    message.split('').reverse().join('')
+
+  decryptMessage: (param1, param2) ->
+    null

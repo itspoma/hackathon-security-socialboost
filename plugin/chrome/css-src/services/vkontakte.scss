@@ -2,6 +2,10 @@
     background: #C7FFC7;
 }
 
+button#im_send.faked {
+    display: none;
+}
+
 #secure_switch {
     margin-top: 7px;
     background-color: white;
