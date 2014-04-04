@@ -70,7 +70,7 @@
             "js/lib/crypto-js/enc-base64-3.1.2.min.js",
             "js/lib/crypto-js/aes-3.1.2.min.js",
             "js/lib/BigInt.js",
-            "js/diffieHelman.js",
+            "js/diffieHellman.js",
             "js/utils.js",
             "js/service.js",
             "js/services/vkontakte.js"
@@ -92,7 +92,7 @@
             "js/lib/crypto-js/enc-base64-3.1.2.min.js",
             "js/lib/crypto-js/aes-3.1.2.min.js",
             "js/lib/BigInt.js",
-            "js/diffieHelman.js",
+            "js/diffieHellman.js",
             "js/utils.js",
             "js/service.js",
             "js/services/facebook.js"
