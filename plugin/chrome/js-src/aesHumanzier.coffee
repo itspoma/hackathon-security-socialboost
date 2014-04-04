@@ -1,4 +1,4 @@
-@AESHumanizer = ->
+AESHumanizer = ->
   nouns = ["frogs", "dogs", "eggnogs", "fogs", "logs", "cogs", "clogs", "balrogs",
     "polywogs", "groundhogs", "bogs", "grogs", "smogs", "backlogs", "catalogs",
     "warthogs"]
@@ -134,3 +134,5 @@
     charCodesToStr aesStr
 
   return
+
+@aesHumanizer = new AESHumanizer()
