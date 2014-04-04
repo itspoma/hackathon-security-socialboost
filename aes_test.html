@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" media="all" href=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body lang="en">
+
+<form id="test">
+    <p>
+        <label>Our base64 encoded Diffie-Hellman Shared Key:</label><br>
+        <input id="secret" value="Shared Key">
+    </p>
+    <p>
+        <label>Message</label><br>
+        <textarea id="text" style="width: 500px; height: 200px">Here we'll put raw message needed to securely protect</textarea>
+    </p>
+
+    <input type="submit" id="submit">
+</form>
+
+<div id="output"></div>
+
+
+<!--
+http://www.davidebarranca.com/2012/10/crypto-js-tutorial-cryptography-for-dummies/
+-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/core-min.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-utf16-min.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+<script>
+
+    /*
+     // Simple test
+     var encrypted = '' + CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+     var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+     console.log(decrypted.toString(CryptoJS.enc.Utf8));
+     */
+
+    $(function() {
+
+        $('#test').on('submit', function() {
+
+            var plaintext = $('#text').val();
+            var secret = $('#secret').val();
+
+            var encrypted = '' + CryptoJS.AES.encrypt(plaintext, secret);
+            console.log('Here you have encrypted message: '+ encrypted);
+
+            var decrypted = CryptoJS.AES.decrypt(encrypted, secret);
+            console.log('Here you are, desctyped one: '+ decrypted.toString(CryptoJS.enc.Utf8));
+
+            alert('Look into console');
+            return false;
+        });
+
+
+    });
+
+</script>
+</body>
+</html>
