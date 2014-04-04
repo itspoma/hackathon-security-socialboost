@@ -65,6 +65,10 @@
         ],
         "js": [
             "js/lib/jquery-2.1.0.min.js",
+            "js/lib/core-3.1.2.min.js",
+            "js/lib/enc-utf16-3.1.2.min.js",
+            "js/lib/enc-base64-3.1.2.min.js",
+            "js/lib/aes-3.1.2.min.js",
             "js/utils.js",
             "js/service.js",
             "js/services/vkontakte.js"
@@ -81,6 +85,10 @@
         ],
         "js": [
             "js/lib/jquery-2.1.0.min.js",
+            "js/lib/core-3.1.2.min.js",
+            "js/lib/enc-utf16-3.1.2.min.js",
+            "js/lib/enc-base64-3.1.2.min.js",
+            "js/lib/aes-3.1.2.min.js",
             "js/utils.js",
             "js/service.js",
             "js/services/facebook.js"
