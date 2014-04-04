@@ -1,1 +1,7 @@
 .DS_Store
+
+.sass-cache
+config.codekit
+
+plugin/chrome/js/*
+plugin/chrome/css/*

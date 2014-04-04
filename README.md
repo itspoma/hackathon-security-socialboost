@@ -6,7 +6,7 @@ Install:
 Verify:
 
 * $ npm -v
-* * 1.3.11
+> 1.3.11
 
 * $ node -v
 > v0.10.18
