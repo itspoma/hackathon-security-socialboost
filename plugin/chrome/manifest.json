@@ -1,62 +1,21 @@
 {
     "manifest_version": 2,
 
-    "name": "test",
-    "short_name": "test",
-
-    "description": "for testing",
+    "name": "Cocial Communication Encryption",
+    "short_name": "Social Encryption",
+    "description": "Social network (such as facebook, vkontakte, odnoklassniki, mail-ru) communication protection using encryption.",
     "version": "0.1",
 
     "icons": {
-        "128": "graph/128x128.png",
-        "64": "graph/64x64.png",
-        "48": "graph/48x48.png",
-        "32": "graph/32x32.png",
-        "16": "graph/16x16.png"
+        "128": "icons/128x128.png",
+        "64": "icons/64x64.png",
+        "48": "icons/48x48.png",
+        "32": "icons/32x32.png",
+        "16": "icons/16x16.png"
     },
 
-    // "omnibox": { "keyword" : "qqq" },
-
     "offline_enabled": true,
-
-    // "permissions": [
-    //     // "contextMenus",
-    //     // "bookmarks",
-    //     // "activeTab",
-    //     // "tabs",
-    //     // "http://*/*",
-    //     // "https://*/*",
-    //     // notifications
-    //     // storage
-    //     // unlimitedStorage
-    //     // fileSystem
-    //     // fileSystem.write
-    //     // webview
-    //     // identity
-    //     // "socket": [ "tcp-connect:*:*", "tcp-listen:*:*" ]
-    //     // "webNavigation",
-    //     // "https://vk.com/*",
-    //     // "http://vk.com/*"
-    // ],
-
     "incognito": "split",
-
-    // "permissions": [ "tabs", "\u003Call_urls>", "cookies", "contextMenus", "unlimitedStorage", "notifications", "storage", "clipboardWrite" ],
-
-    // "background": {
-    //     "scripts": [
-    //         "js/lib/jquery-2.1.0.min.js",
-    //         "js/utils.js",
-    //         "js/background.js"
-    //     ],
-    //     "persistent": false
-    // },
-
-    // "app": {
-    //     "launch": {
-    //        "local_path": "index.html"
-    //     }
-    //  },
 
     "content_scripts": [ {
         "css": [
@@ -130,48 +89,6 @@
         "run_at": "document_end"
     } ],
 
-    "page_action": {
-        "default_icon": {
-             "19": "graph/icon19.png",
-             "38": "graph/icon32.png"
-        }
-        // ,
-        // "default_popup": "views/popup.html"
-    },
-
-    // "page_action": {
-    //     "default_icon": {                    // optional
-    //       // "19": "images/icon19.png",           // optional
-    //       // "38": "images/icon38.png"            // optional
-    //       "32": "https://www.google.com/images/icons/product/chrome-32.png"
-    //     },
-    //     "default_title": "Google Mail",      // optional; shown in tooltip
-    //     "default_popup": "popup.html"        // optional
-    // },
-
-    // "browser_action": {
-    //   "default_title": "Make this page red"
-    // },
-
-    // "commands": {
-    //   "toggle-feature": {
-    //     "suggested_key": { "default": "Ctrl+Shift+X" },
-    //     "description": "Send a 'toggle-feature' event to the extension"
-    //   },
-    //   "_execute_browser_action": {
-    //     "suggested_key": {
-    //       "default": "Ctrl+Shift+A",
-    //       "mac": "MacCtrl+Shift+A"
-    //     }
-    //   }
-    // },
-
-    // "browser_action": {
-    //     "default_title": "My Bookmarks",
-    //     // "default_icon": "icon.png",
-    //     "default_popup": "popup.html"
-    // },
-
     "content_security_policy": "default-src 'self'; connect-src *; script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; style-src * blob: data: filesystem: 'unsafe-inline'; img-src *; frame-src * http://www.facebook.com https://plusone.google.com https://platform.twitter.com blob: data: filesystem:; font-src * blob: data: filesystem:; media-src *;",
 
     "web_accessible_resources": [
@@ -180,23 +97,4 @@
         "graph/icon16.png",
         "graph/icon32.png"
     ]
-
-    // "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
-    // ,
-
-    // "icons": {
-    //   "128": "icon_128.png"
-    // },
-
-    // "permissions": [
-    //   "https://secure.flickr.com/"
-    // ],
-
-    // "permissions": ["http://*.google.com/", "https://*.google.com/"],
-
-    // "browser_action": {
-    //   "default_title": "",
-    //   "default_icon": "icon.png",
-    //   "default_popup": "popup.html"
-    // }
 }
