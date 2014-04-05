@@ -7,7 +7,7 @@ class Facebook extends Service
 
   getMessagesElements: -> $('._3hi p')
 
-  isReady: -> $('#pagelet_web_messenger').length >= 1
+  isReady: -> @getMessageElement().length >= 1
 
   secureElement: ->
     $('#js_22 ._2pt ._1rt').addClass 'secured'

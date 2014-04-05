@@ -44,14 +44,10 @@ class Vkontakte extends Service
         $('button#im_send').click()
         false
 
-    console.log(99)
-
     $('.emoji_smile').hide()
     $('#im_rcemoji').hide()
     $('#im_upload').hide()
     $('#im_add_media').hide()
-
-    console.log(9999)
 
     super
 
