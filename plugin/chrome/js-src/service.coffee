@@ -66,6 +66,7 @@ class @Service
     Service.prototype.signature.types.MESSAGE + aesHumanizer.toNaturalString aesEncryptedMessage
 
   decryptMessage: (message) ->
+    return unless diffieHellman.shared_key?
     message = message.substr Service.prototype.signature.types.MESSAGE.length
     aesEncryptedMessage = aesHumanizer.toAESString message
     CryptoJS.AES.decrypt(aesEncryptedMessage, diffieHellman.shared_key).toString(CryptoJS.enc.Utf8)
