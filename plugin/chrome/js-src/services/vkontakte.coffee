@@ -2,6 +2,8 @@ class Vkontakte extends Service
   getMessageElement: -> $('.im_editable_txt div.im_editable')
   addSwitchButtonElement: -> $('#im_user_holder').append '<div id="secure_switch"><i></i></div>'
 
+  getMessagesElements: -> $('.im_msg_text')
+
   secureElement: ->
     # button = $('button#im_send').clone()
     # button.attr 'id', 'im_send_fake'
@@ -21,10 +23,13 @@ class Vkontakte extends Service
         el = @getMessageElement()
 
         rawMessage = el.text()
+
+        return false if !rawMessage
+
         encryptedMessage = @encryptMessage(rawMessage)
 
         el.text(encryptedMessage)
-        alert encryptedMessage
+        # alert encryptedMessage
 
         $('button#im_send').click()
         false

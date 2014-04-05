@@ -1,5 +1,6 @@
 class @Service
   getMessageElement: -> throw new Exception 'abstraction method must be declared'
+  getMessagesElements: -> throw new Exception 'abstraction method must be declared'
   addSwitchButtonElement: -> throw new Exception 'abstraction method must be declared'
   getSwitchButtonElement: -> $('#secure_switch')
   
@@ -7,12 +8,26 @@ class @Service
     @addSwitchButtonElement()
     @getSwitchButtonElement().addClass 'off'
     @bindEvents()
+    @startMonitoring()
+    @stopMonitoring()
 
   initAfter: (ms) ->
     setTimeout @init, ms
 
   bindEvents: ->
     $('#secure_switch').bind 'click', => @toggleSecureElement()
+
+  startMonitoring: =>
+    @getMessagesElements().each (i,messageEl) =>
+      message = $(messageEl).text()
+      if @signature.isValid(message)
+        if @signature.getType(message) == 'HANDSHAKE'
+          $(messageEl).text('HANDSHAKE')
+        else if @signature.getType(message) == 'MESSAGE'
+          $(messageEl).text('MESSAGE')
+    @monitoring = setTimeout @startMonitoring, 2000
+
+  stopMonitoring: => clearInterval(@monitoring) if @monitoring
 
   isSecured: -> @getMessageElement().hasClass 'secured'
   
@@ -23,6 +38,7 @@ class @Service
     el.removeClass 'off'
     el.addClass 'on'
     el.attr 'title', 'захищено'
+    @startMonitoring()
   unsecureElement: ->
     @getMessageElement().removeClass 'secured'
     el = @getSwitchButtonElement()
@@ -30,6 +46,7 @@ class @Service
     el.removeClass 'off'
     el.addClass 'off'
     el.attr 'title', 'не захищено'
+    @stopMonitoring()
   toggleSecureElement: -> if not @isSecured() then @secureElement() else @unsecureElement()
 
   encryptMessage: (message) ->
@@ -37,3 +54,15 @@ class @Service
 
   decryptMessage: (param1, param2) ->
     null
+
+  signature:
+    types:
+      HANDSHAKE: '###'
+      MESSAGE: '@@@'
+    getType: (text) ->
+      for key, value of this.types
+        if (text.indexOf value) == 0
+          return key
+      null
+    isValid: (text) -> this.getType(text)?
+    format: (type, text) -> type + text

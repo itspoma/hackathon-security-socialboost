@@ -19,38 +19,38 @@
 
     "offline_enabled": true,
 
-    "permissions": [
-        // "contextMenus",
-        // "bookmarks",
-        // "activeTab",
-        // "tabs",
-        // "http://*/*",
-        // "https://*/*",
-        // notifications
-        // storage
-        // unlimitedStorage
-        // fileSystem
-        // fileSystem.write
-        // webview
-        // identity
-        // "socket": [ "tcp-connect:*:*", "tcp-listen:*:*" ]
-        "webNavigation",
-        "https://vk.com/*",
-        "http://vk.com/*"
-    ],
+    // "permissions": [
+    //     // "contextMenus",
+    //     // "bookmarks",
+    //     // "activeTab",
+    //     // "tabs",
+    //     // "http://*/*",
+    //     // "https://*/*",
+    //     // notifications
+    //     // storage
+    //     // unlimitedStorage
+    //     // fileSystem
+    //     // fileSystem.write
+    //     // webview
+    //     // identity
+    //     // "socket": [ "tcp-connect:*:*", "tcp-listen:*:*" ]
+    //     // "webNavigation",
+    //     // "https://vk.com/*",
+    //     // "http://vk.com/*"
+    // ],
 
-    "incognito": "spanning",
+    "incognito": "split",
 
     // "permissions": [ "tabs", "\u003Call_urls>", "cookies", "contextMenus", "unlimitedStorage", "notifications", "storage", "clipboardWrite" ],
 
-    "background": {
-        "scripts": [
-            "js/lib/jquery-2.1.0.min.js",
-            "js/utils.js",
-            "js/background.js"
-        ],
-        "persistent": false
-    },
+    // "background": {
+    //     "scripts": [
+    //         "js/lib/jquery-2.1.0.min.js",
+    //         "js/utils.js",
+    //         "js/background.js"
+    //     ],
+    //     "persistent": false
+    // },
 
     // "app": {
     //     "launch": {
