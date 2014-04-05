@@ -3,6 +3,10 @@ input[uid="uidClickSimpleInput"].secured {
     background: #9DF39D;
 }
 
+#ok-e-m_button.faked {
+    display: none;
+}
+
 #secure_switch {
     display: inline-block;
     background: #FFF;
@@ -20,4 +24,11 @@ input[uid="uidClickSimpleInput"].secured {
         margin-top: 5px;
         margin-left: 7px;
     }
+}
+
+.nimTextAreaformatButton.opacity0,
+.nimTextAreasmilesButton_2.opacity0,
+.nimTextAreasmilesButton_6.opacity0 {
+    transition: opacity 0.5s ease;
+    opacity: 0.2;
 }
