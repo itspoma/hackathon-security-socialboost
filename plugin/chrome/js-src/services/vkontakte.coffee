@@ -2,6 +2,8 @@ class Vkontakte extends Service
   getMessageElement: -> $('.im_editable_txt div.im_editable')
   addSwitchButtonElement: -> $('#im_user_holder').append '<div id="secure_switch"><i></i></div>'
 
+  isReady: -> $('#im_texts').length > 0
+
   getMessagesElements: -> $('.im_msg_text')
 
   secureElement: ->
