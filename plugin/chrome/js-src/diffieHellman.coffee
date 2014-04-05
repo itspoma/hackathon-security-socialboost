@@ -4,6 +4,7 @@
   @shared_key = publicKey = otherPublicKey = p = g = undefined
 
   @handshake = (message)->
+    return undefined if shared_key?
     if message == undefined
       p = str2bigInt "112457129983317064494133258034491756790943511028023366901014968560410379195027", 10, 80
       g = str2bigInt "3", 10, 80

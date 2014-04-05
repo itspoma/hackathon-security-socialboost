@@ -41,7 +41,7 @@ class @Service
   isSecured: -> @getMessageElement().hasClass 'secured'
   
   secureElement: ->
-    # @diffieHellman.handshake()
+    @diffieHellman.handshake()
     @getMessageElement().addClass 'secured'
     @getMessageElement().focus()
     el = @getSwitchButtonElement()
