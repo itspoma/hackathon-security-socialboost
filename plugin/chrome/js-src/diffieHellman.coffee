@@ -2,7 +2,7 @@
 
   privateKey = randBigInt(256)
   # Temporary decision to finish up all other parts of the program. Should be undefined.
-  @shared_key = "60608010726750674192959028589795515072625428377410239241325139187046406995695"
+  # @shared_key = "60608010726750674192959028589795515072625428377410239241325139187046406995695"
   @publicKey = otherPublicKey = p = g = undefined
 
   @handshake = (message)->
