@@ -22,7 +22,8 @@
     else
       @shared_key = bigInt2str powMod(otherPublicKey, privateKey, p), 10
       message = undefined
-    message
+    console.log @shared_key
+    Service.prototype.signature.types.HANDSHAKE + JSON.stringify(message)
 
   return
 
