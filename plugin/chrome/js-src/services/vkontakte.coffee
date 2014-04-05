@@ -6,6 +6,14 @@ class Vkontakte extends Service
 
   getMessagesElements: -> $('.im_msg_text')
 
+  isOur: ($messageEl) ->
+    $messageEl.siblings().find('a').attr('href') == $('#myprofile_wrap a').attr('href')
+
+  send: (message) ->
+    return false unless message?
+    $('.im_editable_txt div.im_editable').text(message)
+    $('button#im_send').click()
+
   secureElement: ->
     # button = $('button#im_send').clone()
     # button.attr 'id', 'im_send_fake'

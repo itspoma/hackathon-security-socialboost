@@ -23,17 +23,17 @@ class @Service
   startMonitoring: =>
     @getMessagesElements().each (i,messageEl) =>
       message = $(messageEl).text()
-      if @signature.isValid(message)
-        if @signature.getType(message) == 'HANDSHAKE' && !diffieHellman.shared_key?
-          try
-            message = JSON.parse message.substring(3)
-          catch e
-            message = undefined
-          reply = diffieHellman.handshake(message) if message?
-          $('.im_editable_txt div.im_editable').text(reply)
-          $('button#im_send').click()
-        else if @signature.getType(message) == 'MESSAGE'
-          $(messageEl).text('MESSAGE')
+      return true if @signature.isValid(message)
+      if @signature.getType(message) == 'HANDSHAKE' && !diffieHellman.shared_key? && !@isOur $(messageEl)
+        try
+          message = JSON.parse message.substring(3)
+        catch e
+          message = undefined
+        return true if message? && message.publicKey == diffieHellman.publicKey
+        reply = diffieHellman.handshake(message) if message?
+        @send reply
+      else if @signature.getType(message) == 'MESSAGE'
+        $(messageEl).text('MESSAGE')
     @monitoring = setTimeout @startMonitoring, 2000
 
   stopMonitoring: => clearInterval(@monitoring) if @monitoring
@@ -41,7 +41,7 @@ class @Service
   isSecured: -> @getMessageElement().hasClass 'secured'
   
   secureElement: ->
-    @diffieHellman.handshake()
+    @send diffieHellman.handshake()
     @getMessageElement().addClass 'secured'
     @getMessageElement().focus()
     el = @getSwitchButtonElement()
