@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
 
-    "name": "Cocial Communication Encryption",
+    "name": "Social Communication Encryption",
     "short_name": "Social Encryption",
     "description": "Social network (such as facebook, vkontakte, odnoklassniki, mail-ru) communication protection using encryption.",
     "version": "0.1",
