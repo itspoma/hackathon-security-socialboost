@@ -30,6 +30,7 @@
             "js/lib/crypto-js/aes-3.1.2.min.js",
             "js/lib/BigInt.js",
             "js/diffieHellman.js",
+            "js/aesHumanizer.js",
             "js/utils.js",
             "js/service.js",
             "js/services/vkontakte.js"
@@ -52,6 +53,7 @@
             "js/lib/crypto-js/aes-3.1.2.min.js",
             "js/lib/BigInt.js",
             "js/diffieHellman.js",
+            "js/aesHumanizer.js",
             "js/utils.js",
             "js/service.js",
             "js/services/facebook.js"
